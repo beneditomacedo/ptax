@@ -14,6 +14,10 @@
 #'
 #' @importFrom lubridate year month
 #'
+#' @examples
+#' ptax_mensal(2010,1)
+#' ptax_mensal(2010,13)
+#'
 #' @export
 #'
 
