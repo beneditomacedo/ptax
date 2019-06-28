@@ -8,14 +8,14 @@
 #'
 #' @return Vetor com a data, o valor de compra e venda da ptax no ultimo dia util do mes
 #'
-#' @importFrom dplyr filter arrange desc row_number count
-#'
-#' @importFrom magrittr %>%
-#'
 #' @importFrom lubridate year month
 #'
+#' @importFrom utils tail
+#'
 #' @examples
+#'
 #' ptax_mensal(2010,1)
+#'
 #' ptax_mensal(2010,13)
 #'
 #' @export
@@ -23,13 +23,14 @@
 
 ptax_mensal <- function (ano, mes) {
 
-  v <- ptax::ptax %>%
-    filter(year(.data$Data) == ano & month(.data$Data) == mes) %>%
-    arrange (desc(.data$Data)) %>% filter(row_number() == 1)
+  t <- subset(ptax::ptax, year(Data_Cotacao) == ano & month(Data_Cotacao) == mes)
 
-  if (count(v) == 1) {
-    return (v)
+  if (nrow(t) != 0) {
+
+    t <- t[order(t$Data),]
+    t <- tail(t,1)
+    return(t)
   } else {
-    return (NULL)
+    return(NULL)
   }
 }

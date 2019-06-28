@@ -19,7 +19,9 @@ Retorna um vetor com os valores de compra e venda da PTAX no ultimo dia util do 
 definida como a ptax_mensal
 }
 \examples{
+
 ptax_mensal(2010,1)
+
 ptax_mensal(2010,13)
 
 }

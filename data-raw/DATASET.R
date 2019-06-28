@@ -10,10 +10,10 @@ ptax_raw <- read.csv2("ptax_raw.csv")
 ptax<-ptax_raw[,c(1,5,6)]
 
 # Nomear as colunas
-names(ptax) <- c("Data","Compra","Venda")
+names(ptax) <- c("Data_Cotacao","Compra","Venda")
 
 # Converter a primeira coluna para o tipo Date
-ptax$Data <- dmy(ptax$Data)
+ptax$Data_Cotacao <- dmy(ptax$Data_Cotacao)
 
 # Add to package
 usethis::use_data(ptax,overwrite = TRUE)
