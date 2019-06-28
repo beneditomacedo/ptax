@@ -8,7 +8,9 @@
 #'
 #' @return Vetor com a data, o valor de compra e venda da ptax no ultimo dia util do mes
 #'
-#' @importFrom dplyr filter arrange desc row_number count %>%
+#' @importFrom dplyr filter arrange desc row_number count
+#'
+#' @importFrom magrittr %>%
 #'
 #' @importFrom lubridate year month
 #'
