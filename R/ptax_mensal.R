@@ -29,6 +29,7 @@ ptax_mensal <- function (ano, mes) {
 
     t <- t[order(t$Data),]
     t <- tail(t,1)
+    row.names(t) <- NULL
     return(t)
   } else {
     return(NULL)
