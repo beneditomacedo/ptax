@@ -1,0 +1,31 @@
+---
+title: "PTAX Package"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(ptax)
+```
+
+Disponibiliza a tabela da PTAX Diaria com a taxa de cambio entre dolar e real entre os anos de 2010 e 2018
+
+```{r ptax_head}
+head(ptax)
+```
+
+Exibe a PTAX Mensal
+
+```{r ptax_mensal}
+ptax_mensal(2010,1)
+```
+
+Caso nao existam dados para o ano e mes informados, sera retornado NULL
+
+```{r ptax_mensal_NULL}
+ptax_mensal(2009,1)
+```
+
+Fonte
+Banco Central do Brasil disponivel na URL https://www.bcb.gov.br/acessoinformacao/legado?url=
+
