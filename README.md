@@ -1,8 +1,8 @@
 PTAX Package
 ================
 
-Disponibiliza a tabela da PTAX Diaria com a taxa de cambio entre dolar e
-real entre os anos de 2010 e 2018
+Disponibiliza a PTAX Diaria, taxa de cambio de compra e venda entre
+dolar e real, entre os anos de 2010 e 2018
 
 ``` r
 head(ptax)
@@ -16,7 +16,8 @@ head(ptax)
     ## 5   2010-07-08 1.7644 1.7652
     ## 6   2010-07-09 1.7564 1.7572
 
-Exibe a PTAX Mensal
+Exibe a PTAX Mensal, ie, a cotacao de compra e venda do ultimo dia ultil
+do mes
 
 ``` r
 ptax_mensal(2010,1)
@@ -33,5 +34,7 @@ ptax_mensal(2009,1)
 
     ## NULL
 
-Fonte Banco Central do Brasil disponivel na URL
+-----
+
+Fonte: Banco Central do Brasil disponivel na URL
 <https://www.bcb.gov.br/acessoinformacao/legado?url=>
