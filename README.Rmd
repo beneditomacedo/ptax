@@ -14,7 +14,7 @@ Disponibiliza a PTAX Diaria, taxa de cambio de compra e venda entre dolar e real
 head(ptax)
 ```
 
-Exibe a PTAX Mensal, ie, a cotacao de compra e venda do ultimo dia ultil do mes
+Exibe a PTAX Mensal, ie, a cotacao de compra e venda do ultimo dia util do mes
 
 ```{r ptax_mensal}
 ptax_mensal(2010,1)

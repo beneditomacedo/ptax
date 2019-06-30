@@ -16,7 +16,7 @@ head(ptax)
     ## 5   2010-07-08 1.7644 1.7652
     ## 6   2010-07-09 1.7564 1.7572
 
-Exibe a PTAX Mensal, ie, a cotacao de compra e venda do ultimo dia ultil
+Exibe a PTAX Mensal, ie, a cotacao de compra e venda do ultimo dia util
 do mes
 
 ``` r
