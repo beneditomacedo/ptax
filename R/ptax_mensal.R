@@ -27,6 +27,8 @@ ptax_mensal <- function (ano, mes) {
 
   if (nrow(t) != 0) {
 
+    # TODO ordenar a ptax na criacao
+    #
     t <- t[order(t$Data),]
     t <- tail(t,1)
     row.names(t) <- NULL
