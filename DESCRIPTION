@@ -7,7 +7,7 @@ Maintainer: Benedito Alberto Macedo <benedito.macedo@gmail.com>
 Description: Esse pacote prove a cotacao diaria da PTAX do Banco Central do Brasil de 2010 a 2018. Consiste na media das cotacoes de compra e venda de dolar informadas pelos operadores de cambio ao Banco Central do Brasil. 
 Depends: 
   R (>= 2.10)
-License: CC0
+License: MIT
 Encoding: UTF-8
 LazyData: true
 Imports:
