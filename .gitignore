@@ -3,3 +3,5 @@
 .RData
 .Ruserdata
 .rstudio/*
+.DS_Store
+R/x86_64*

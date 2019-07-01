@@ -1,6 +1,14 @@
 PTAX Package
 ================
 
+## Instalação
+
+    install.packages("devtools")
+    install_github("beneditomacedo/ptax",upgrade = "never")
+    library(ptax)
+
+## Uso
+
 Disponibiliza a PTAX Diaria, taxa de cambio de compra e venda entre
 dolar e real, entre os anos de 2010 e 2018
 
@@ -34,7 +42,36 @@ ptax_mensal(2009,1)
 
     ## NULL
 
------
+Exibe a PTAX Diaria, ie, a cotacao de compra e venda do dia
 
-Fonte: Banco Central do Brasil disponivel na URL
+``` r
+ptax_diaria(2010,1,4)
+```
+
+    ##      Data_Cotacao Compra Venda
+    ## 2136   2010-01-04 1.7232 1.724
+
+Caso a cotacao para esse dia nao exista sera retornado NULL. Nesse caso,
+se a data nao for um dia util ou se for uma data anterior a 01/Jan/2010
+ou posterial a 31/12/2018
+
+``` r
+ptax_diaria(2010,1,1)
+```
+
+    ## NULL
+
+``` r
+ptax_diaria(2009,1,15)
+```
+
+    ## NULL
+
+## Licenca
+
+<a href="https://opensource.org/licenses/MIT">MIT</a>
+
+## Fonte
+
+Banco Central do Brasil disponivel na URL
 <https://www.bcb.gov.br/acessoinformacao/legado?url=>
