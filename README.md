@@ -42,6 +42,31 @@ ptax_mensal(2009,1)
 
     ## NULL
 
+Exibe a PTAX Diaria, ie, a cotacao de compra e venda do dia
+
+``` r
+ptax_diaria(2010,1,4)
+```
+
+    ##      Data_Cotacao Compra Venda
+    ## 2136   2010-01-04 1.7232 1.724
+
+Caso a cotacao para esse dia nao exista sera retornado NULL. Nesse caso,
+se a data nao for um dia util ou se for uma data anterior a 01/Jan/2010
+ou posterial a 31/12/2018
+
+``` r
+ptax_diaria(2010,1,1)
+```
+
+    ## NULL
+
+``` r
+ptax_diaria(2009,1,15)
+```
+
+    ## NULL
+
 ## Licenca
 
 <a href="https://opensource.org/licenses/MIT">MIT</a>

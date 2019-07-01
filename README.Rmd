@@ -37,6 +37,21 @@ Caso nao existam dados para o ano e mes informados, sera retornado NULL
 ptax_mensal(2009,1)
 ```
 
+Exibe a PTAX Diaria, ie, a cotacao de compra e venda do dia 
+
+```{r ptax_diaria}
+ptax_diaria(2010,1,4)
+```
+
+Caso a cotacao para esse dia nao exista sera retornado NULL. Nesse caso, se a data nao for um dia util ou se for uma data anterior a 01/Jan/2010 ou posterial a 31/12/2018
+
+```{r ptax_diaria_NULL}
+ptax_diaria(2010,1,1)
+
+ptax_diaria(2009,1,15)
+```
+
+
 ## Licenca
 
 <a href="https://opensource.org/licenses/MIT">MIT</a>
