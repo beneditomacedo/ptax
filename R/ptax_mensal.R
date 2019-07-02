@@ -21,7 +21,9 @@
 #' @export
 #'
 
-ptax_mensal <- function (ano, mes) {
+ptax_mensal <- function (ano = NULL, mes = NULL) {
+  
+  if(is.null(ano) | is.null(mes)) stop ("Informe ano e mes -> ptax_mensal (AAAA,MM)")
 
   t <- subset(ptax::ptax, year(Data_Cotacao) == ano & month(Data_Cotacao) == mes)
 
