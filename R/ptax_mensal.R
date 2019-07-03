@@ -24,6 +24,13 @@
 ptax_mensal <- function (ano = NULL, mes = NULL) {
   
   if(is.null(ano) | is.null(mes)) stop ("Informe ano e mes -> ptax_mensal (AAAA,MM)")
+  
+  #
+  # ano < 100 to avoid year informed with 2 digits
+  #
+  if(!is.numeric(ano) | ano < 100) stop ("Informe ano e mes -> ptax_mensal (AAAA,MM)")
+  
+  if(!is.numeric(mes) | mes > 12) stop ("Informe ano e mes -> ptax_mensal (AAAA,MM)")
 
   t <- subset(ptax::ptax, year(Data_Cotacao) == ano & month(Data_Cotacao) == mes)
 
