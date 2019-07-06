@@ -4,7 +4,7 @@
 \alias{ptax_diaria}
 \title{PTAX Diaria}
 \usage{
-ptax_diaria(ano, mes, dia)
+ptax_diaria(ano = NULL, mes = NULL, dia = NULL)
 }
 \arguments{
 \item{ano}{YYYY (quatro digitos)}

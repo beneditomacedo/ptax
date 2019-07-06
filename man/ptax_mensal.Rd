@@ -4,7 +4,7 @@
 \alias{ptax_mensal}
 \title{PTAX Mensal}
 \usage{
-ptax_mensal(ano, mes)
+ptax_mensal(ano = NULL, mes = NULL)
 }
 \arguments{
 \item{ano}{YYYY (quatro digitos)}
@@ -21,7 +21,5 @@ definida como a ptax_mensal
 \examples{
 
 ptax_mensal(2010,1)
-
-ptax_mensal(2010,13)
 
 }
