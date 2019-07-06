@@ -1,10 +1,11 @@
 test_that("checking ptax_diaria with invalid parameters", {
   expect_null(ptax_diaria(2009,1,1))
   expect_null(ptax_diaria(2010,1,1))
-  expect_null(ptax_diaria(2010,1,"a"))
-  expect_null(ptax_diaria("a",1,4)) 
-  expect_null(ptax_diaria(2010))
-  expect_null(ptax_diaria(2010,1))
+  expect_error(ptax_diaria(2010,13),"Informe ano, mes e dia")
+  expect_error(ptax_diaria(2010,1,"a"),"Informe ano, mes e dia")
+  expect_error(ptax_diaria("a",1,4),"Informe ano, mes e dia") 
+  expect_error(ptax_diaria(2010),"Informe ano, mes e dia")
+  expect_error(ptax_diaria(2010,1),"Informe ano, mes e dia")
 })
 
 test_that("checking ptax_diaria with valid parameters", {
