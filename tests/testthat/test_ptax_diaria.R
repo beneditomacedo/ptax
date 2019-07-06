@@ -1,3 +1,5 @@
+context("ptax_diaria")
+
 test_that("checking ptax_diaria with invalid parameters", {
   expect_null(ptax_diaria(2009,1,1))
   expect_null(ptax_diaria(2010,1,1))
