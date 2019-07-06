@@ -18,7 +18,19 @@
 #' @export
 #'
 
-ptax_diaria <- function (ano, mes, dia) {
+ptax_diaria <- function (ano = NULL, mes = NULL, dia = NULL) {
+  
+  if(is.null(ano) | is.null(mes) | is.null(dia)) stop ("Informe ano, mes e dia -> ptax_diaria (AAAA,MM,DD)")
+  
+  #
+  # ano < 100 to avoid year informed with 2 digits
+  #
+  if(!is.numeric(ano) | ano < 100) stop ("Informe ano, mes e dia -> ptax_diaria (AAAA,MM,DD)")
+  
+  if(!is.numeric(mes) | mes > 12) stop ("Informe ano, mes e dia -> ptax_diaria (AAAA,MM,DD)")
+  
+  if(!is.numeric(dia) | dia > 31) stop ("Informe ano, mes e dia -> ptax_diaria (AAAA,MM,DD)")
+  
   
   d <- paste(dia,mes,ano,sep="/")
   
