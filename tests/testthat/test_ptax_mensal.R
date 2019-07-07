@@ -1,3 +1,5 @@
+context("ptax_mensal")
+
 test_that("checking ptax_mensal with invalid parameters", {
   expect_null(ptax_mensal(2009,1))
   expect_error(ptax_mensal(2010,13),"Informe ano e mes")
